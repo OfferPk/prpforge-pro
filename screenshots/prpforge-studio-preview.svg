@@ -1,0 +1,146 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="1200" height="675">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#070e17"/>
+      <stop offset="100%" stop-color="#0e1928"/>
+    </linearGradient>
+    <linearGradient id="headerGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#091526"/>
+      <stop offset="100%" stop-color="#172c4c"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#00f0ff"/>
+      <stop offset="100%" stop-color="#2563eb"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="675" fill="url(#bg)"/>
+
+  <!-- Top App Header -->
+  <rect x="0" y="0" width="1200" height="80" fill="url(#headerGrad)"/>
+  <line x1="0" y1="80" x2="1200" y2="80" stroke="#1e3f66" stroke-width="1.5"/>
+
+  <!-- Logo Icon -->
+  <rect x="32" y="15" width="50" height="50" rx="10" fill="url(#accent)"/>
+  <text x="57" y="48" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-weight="900" font-size="20" fill="#070e17" text-anchor="middle">PRP</text>
+
+  <!-- Title -->
+  <text x="96" y="44" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-weight="800" font-size="22" fill="#ffffff">PRPForge Pro <tspan font-size="14" fill="#94a3b8" font-weight="normal">v1.0.0</tspan></text>
+  <text x="96" y="62" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" fill="#94a3b8">IEC 62439-3 PRP / HSR Substation Network Redundancy Studio &amp; Duplicate Discard Sizer</text>
+
+  <!-- Badges -->
+  <rect x="880" y="26" width="140" height="28" rx="6" fill="rgba(0, 240, 255, 0.15)" stroke="#00f0ff" stroke-width="1"/>
+  <text x="950" y="45" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="11" font-weight="700" fill="#00f0ff" text-anchor="middle">IEC 62439-3 CLAUSE 4</text>
+
+  <rect x="1035" y="26" width="130" height="28" rx="6" fill="rgba(16, 185, 129, 0.15)" stroke="#10b981" stroke-width="1"/>
+  <text x="1100" y="45" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="11" font-weight="700" fill="#10b981" text-anchor="middle">0.0 ms BUMPLESS</text>
+
+  <!-- Top Metric Cards -->
+  <g transform="translate(32, 105)">
+    <!-- Card 1 -->
+    <rect x="0" y="0" width="265" height="75" rx="8" fill="#17273d" stroke="#243954" stroke-width="1"/>
+    <text x="132" y="36" font-family="monospace" font-size="24" font-weight="800" fill="#00f0ff" text-anchor="middle">0.00 ms</text>
+    <text x="132" y="58" font-family="sans-serif" font-size="11" fill="#94a3b8" text-anchor="middle">FAILOVER RECOVERY TIME</text>
+
+    <!-- Card 2 -->
+    <rect x="290" y="0" width="265" height="75" rx="8" fill="#17273d" stroke="#243954" stroke-width="1"/>
+    <text x="422" y="36" font-family="monospace" font-size="24" font-weight="800" fill="#60a5fa" text-anchor="middle">3.8 µs</text>
+    <text x="422" y="58" font-family="sans-serif" font-size="11" fill="#94a3b8" text-anchor="middle">LAN A / B ARRIVAL SKEW</text>
+
+    <!-- Card 3 -->
+    <rect x="580" y="0" width="265" height="75" rx="8" fill="#17273d" stroke="#243954" stroke-width="1"/>
+    <text x="712" y="36" font-family="monospace" font-size="24" font-weight="800" fill="#10b981" text-anchor="middle">100%</text>
+    <text x="712" y="58" font-family="sans-serif" font-size="11" fill="#94a3b8" text-anchor="middle">DUPLICATE DISCARD EFFICIENCY</text>
+
+    <!-- Card 4 -->
+    <rect x="870" y="0" width="265" height="75" rx="8" fill="#17273d" stroke="#243954" stroke-width="1"/>
+    <text x="1002" y="36" font-family="monospace" font-size="24" font-weight="800" fill="#f59e0b" text-anchor="middle">0x88FB</text>
+    <text x="1002" y="58" font-family="sans-serif" font-size="11" fill="#94a3b8" text-anchor="middle">PRP RCT SUFFIX (6 BYTES)</text>
+  </g>
+
+  <!-- Middle: Dual-LAN Architecture Diagram Card -->
+  <g transform="translate(32, 205)">
+    <rect x="0" y="0" width="1135" height="150" rx="10" fill="#17273d" stroke="#243954" stroke-width="1"/>
+    <text x="24" y="32" font-family="sans-serif" font-size="15" font-weight="700" fill="#ffffff">Parallel Redundancy Protocol (PRP) Dual-LAN Transmission Architecture</text>
+
+    <!-- Dual Lanes -->
+    <g transform="translate(24, 52)">
+      <!-- Lane A (Blue) -->
+      <rect x="0" y="0" width="1087" height="34" fill="#091422" rx="4" stroke="#2563eb"/>
+      <rect x="8" y="7" width="55" height="20" rx="3" fill="#3b82f6"/>
+      <text x="35" y="21" font-family="sans-serif" font-size="11" font-weight="bold" fill="#ffffff" text-anchor="middle">LAN A</text>
+      <text x="75" y="21" font-family="monospace" font-size="12" fill="#93c5fd">Ethernet Frame + RCT (LanId = 1010 / 0xA) | Transit Latency: 31.6 µs | Status: FORWARDED (FIRST ARRIVAL)</text>
+      <circle cx="1065" cy="17" r="6" fill="#10b981"/>
+
+      <!-- Lane B (Amber) -->
+      <rect x="0" y="44" width="1087" height="34" fill="#091422" rx="4" stroke="#d97706"/>
+      <rect x="8" y="51" width="55" height="20" rx="3" fill="#f59e0b"/>
+      <text x="35" y="65" font-family="sans-serif" font-size="11" font-weight="bold" fill="#070e17" text-anchor="middle">LAN B</text>
+      <text x="75" y="65" font-family="monospace" font-size="12" fill="#fde047">Ethernet Frame + RCT (LanId = 1011 / 0xB) | Transit Latency: 35.4 µs (+3.8 µs Skew) | Status: DISCARDED DUPLICATE</text>
+      <circle cx="1065" cy="61" r="6" fill="#f59e0b"/>
+    </g>
+
+    <!-- Sub-legend -->
+    <g transform="translate(24, 138)">
+      <text x="0" y="0" font-family="sans-serif" font-size="11" fill="#10b981">✓ Zero Packet Loss Guarantee</text>
+      <text x="220" y="0" font-family="sans-serif" font-size="11" fill="#94a3b8">HSR Ring Support: EtherType 0x892F + Path ID</text>
+      <text x="560" y="0" font-family="sans-serif" font-size="11" fill="#94a3b8">RedBox SAN Proxying: 80,000 fps wire forwarding</text>
+      <text x="900" y="0" font-family="sans-serif" font-size="11" fill="#00f0ff">Sliding Window Memory: 256 Frames</text>
+    </g>
+  </g>
+
+  <!-- Lower Left: 10-Point Auditor Card -->
+  <g transform="translate(32, 380)">
+    <rect x="0" y="0" width="555" height="265" rx="10" fill="#17273d" stroke="#243954" stroke-width="1"/>
+    <text x="24" y="32" font-family="sans-serif" font-size="15" font-weight="700" fill="#ffffff">10-Point IEC 62439-3 Redundancy Auditor</text>
+    <text x="530" y="32" font-family="monospace" font-size="18" font-weight="800" fill="#10b981" text-anchor="end">100 / 100 PASSED</text>
+
+    <!-- Item 1 -->
+    <g transform="translate(24, 55)">
+      <rect x="0" y="0" width="60" height="20" rx="4" fill="rgba(16,185,129,0.2)"/>
+      <text x="30" y="14" font-family="sans-serif" font-size="10" font-weight="bold" fill="#10b981" text-anchor="middle">PASS</text>
+      <text x="75" y="14" font-family="sans-serif" font-size="12" fill="#f1f5f9">PRP-01: Zero-Failover Bumpless Recovery Verification (0.0 ms)</text>
+    </g>
+    <!-- Item 2 -->
+    <g transform="translate(24, 90)">
+      <rect x="0" y="0" width="60" height="20" rx="4" fill="rgba(16,185,129,0.2)"/>
+      <text x="30" y="14" font-family="sans-serif" font-size="10" font-weight="bold" fill="#10b981" text-anchor="middle">PASS</text>
+      <text x="75" y="14" font-family="sans-serif" font-size="12" fill="#f1f5f9">PRP-02: PRP Redundancy Control Trailer (RCT) Suffix 0x88FB</text>
+    </g>
+    <!-- Item 3 -->
+    <g transform="translate(24, 125)">
+      <rect x="0" y="0" width="60" height="20" rx="4" fill="rgba(16,185,129,0.2)"/>
+      <text x="30" y="14" font-family="sans-serif" font-size="10" font-weight="bold" fill="#10b981" text-anchor="middle">PASS</text>
+      <text x="75" y="14" font-family="sans-serif" font-size="12" fill="#f1f5f9">PRP-03: HSR Header EtherType 0x892F &amp; Ring Path ID Conformance</text>
+    </g>
+    <!-- Item 4 -->
+    <g transform="translate(24, 160)">
+      <rect x="0" y="0" width="60" height="20" rx="4" fill="rgba(16,185,129,0.2)"/>
+      <text x="30" y="14" font-family="sans-serif" font-size="10" font-weight="bold" fill="#10b981" text-anchor="middle">PASS</text>
+      <text x="75" y="14" font-family="sans-serif" font-size="12" fill="#f1f5f9">PRP-04: LAN A / B Differential Skew Bounds (3.8 µs &lt; 200 µs)</text>
+    </g>
+    <!-- Item 5 -->
+    <g transform="translate(24, 195)">
+      <rect x="0" y="0" width="60" height="20" rx="4" fill="rgba(16,185,129,0.2)"/>
+      <text x="30" y="14" font-family="sans-serif" font-size="10" font-weight="bold" fill="#10b981" text-anchor="middle">PASS</text>
+      <text x="75" y="14" font-family="sans-serif" font-size="12" fill="#f1f5f9">PRP-05: Duplicate Discard Sliding Window Algorithm Operational</text>
+    </g>
+  </g>
+
+  <!-- Lower Right: Code Export Preview -->
+  <g transform="translate(612, 380)">
+    <rect x="0" y="0" width="555" height="265" rx="10" fill="#17273d" stroke="#243954" stroke-width="1"/>
+    <text x="24" y="32" font-family="sans-serif" font-size="15" font-weight="700" fill="#ffffff">Scapy Python Redundancy Generator Preview</text>
+
+    <!-- Code Box -->
+    <rect x="24" y="48" width="507" height="195" rx="6" fill="#09121f" stroke="#243954"/>
+    <text x="40" y="74" font-family="monospace" font-size="11" fill="#7dd3fc"># PRP Redundancy Control Trailer (RCT) Hex:</text>
+    <text x="40" y="94" font-family="monospace" font-size="11" fill="#34d399">rct_lan_a = bytes.fromhex("002AA10088FB") # LAN A, Seq #42</text>
+    <text x="40" y="114" font-family="monospace" font-size="11" fill="#fbbf24">rct_lan_b = bytes.fromhex("002AB10088FB") # LAN B, Seq #42</text>
+    <text x="40" y="144" font-family="monospace" font-size="11" fill="#f1f5f9">pkt_a = Ether(src=src_mac, dst=dst_mac) / Raw(load=payload + rct_lan_a)</text>
+    <text x="40" y="164" font-family="monospace" font-size="11" fill="#f1f5f9">pkt_b = Ether(src=src_mac, dst=dst_mac) / Raw(load=payload + rct_lan_b)</text>
+    <text x="40" y="194" font-family="monospace" font-size="11" fill="#94a3b8"># Transmit simultaneously: sendp(pkt_a, "eth0"); sendp(pkt_b, "eth1")</text>
+    <text x="40" y="214" font-family="monospace" font-size="11" fill="#00f0ff">&lt;!-- 0.0 ms Failover Recovery | Full IEEE 1588 PTP Transparent Clock --&gt;</text>
+  </g>
+</svg>
